@@ -31,7 +31,7 @@ ijkl -----> ijkl -----> i
 
 #### Reset
 通过使用 `Reset`,缓存也可以被复用,我们可以避免冗余的内存分配和不必要的垃圾回收工作。
-```
+```golang
 s1 := strings.NewReader("abcd")
 r := bufio.NewReader(s1)
 b := make([]byte, 3)
@@ -53,7 +53,7 @@ fmt.Printf("%q\n", b)
 
 #### Discard
 这个方法将会丢弃 n 个字节的，返回时也不会返回被丢弃的 n 个字节。如果 `bufio.Reader` 缓存了超过或者等于 n 个字节的数据。那么其将不必从 `io.Reader` 中读取任何数据。其只是简单的从缓存中略去前 n 个字节：
-```
+```golang
 type R struct{}
 func (r *R) Read(p []byte) (n int, err error) {
     fmt.Println("Read")
@@ -75,7 +75,7 @@ Read
 "ijkl"
 ```
 调用 `Discard` 方法将不会从 `reader` `r` 中读取数据。另一种情况，缓存中数据量小于 n，那么 `bufio.Reader` 将会读取需要数量的数据来确保被丢弃的数据量不会少于 n：
-```
+```golang
 type R struct{}
 func (r *R) Read(p []byte) (n int, err error) {
     fmt.Println("Read")
@@ -111,7 +111,7 @@ type Reader interface {
 `bufio.Reader` 的 `Read` 方法从底层的 `io.Reader` 中一次读取最大的数量:
 
 如果内部缓存具有至少一个字节的数据，那么无论传入的切片的大小(len(p))是多少，`Read` 方法都将仅仅从内部缓存中获取数据，不会从底层的 `reader` 中读取任何数据:
-```
+```golang
 func (r *R) Read(p []byte) (n int, err error) {
     fmt.Println("Read")
     copy(p, "abcd")
@@ -144,7 +144,7 @@ n, err := br.Read(buf)
 将会触发读取操作来填充缓存。
 
 3.如果内部缓存是空的，但是传入的切片长度大于缓存长度，那么 `bufio.Reader` 将会跳过缓存，直接读取传入切片长度的数据到切片中:
-```
+```golang
 type R struct{}
 func (r *R) Read(p []byte) (n int, err error) {
     fmt.Println("Read")
@@ -188,7 +188,7 @@ producer        buffer       destination (io.Writer)
 ```
 `----->` 箭头代表写入操作
 `bufio.Writer` 底层使用 []byte 进行缓存
-```
+```golang
 type Writer int
 func (*Writer) Write(p []byte) (n int, err error) {
     fmt.Println(len(p))
@@ -228,9 +228,9 @@ Buffered I/O
 
 > `bufio.Writer` 默认使用 4096 长度字节的缓存，可以使用 NewWriterSize 方法来设定该值
 
-##### Reset
+#### Reset
 缓存是 bufio 的核心部分。通过使用 Reset 方法，Writer 可以用于不同的目的对象。重复使用 Writer 缓存减少了内存的分配。而且减少了额外的垃圾回收工作：
-```
+```golang
 type Writer1 int
 func (*Writer1) Write(p []byte) (n int, err error) {
     fmt.Printf("writer#1: %q\n", p)
