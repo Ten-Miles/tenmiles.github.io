@@ -4,7 +4,7 @@ title:      "Golang package 之 bufio"
 subtitle:   ""
 date:       2020-08-13 12:00:00
 author:     "zhihao"
-header-img: "img/home-bg-css.jpg"
+header-img: "img/post-bg-css.jpg"
 tags:
     - golang
 ---

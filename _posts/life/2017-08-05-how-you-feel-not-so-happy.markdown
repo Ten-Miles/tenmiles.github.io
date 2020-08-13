@@ -4,7 +4,7 @@ title:      "你多久没有那么开心了"
 subtitle:   ""
 date:       2017-08-05 12:00:00
 author:     "zhihao"
-header-img: "img/home-bg-alitrip.jpg"
+header-img: "img/post-bg-alitrip.jpg"
 tags:
     - 平凡的诗意
 ---
