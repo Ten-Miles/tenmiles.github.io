@@ -1,0 +1,16 @@
+---
+layout:     post
+title:      "游戏人生"
+subtitle:   ""
+date:       2018-12-21 12:00:00
+author:     "zhihao"
+header-img: "img/home-bg-walle.jpg"
+tags:
+    - 写点什么
+---
+
+不知道什么时候开始，我变成一个很小心的人，
+
+每次我搜5.56时，都会顺手拿走7.62的。
+
+因为我永远不知道，你身上的那把是AK，还是M4。
