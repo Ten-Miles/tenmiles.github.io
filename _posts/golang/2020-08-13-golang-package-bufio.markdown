@@ -255,7 +255,7 @@ writer#1: "ab"
 writer#2: "ef"
 ```
 这段代码中有一个 bug。在调用 Reset 方法之前，我们应该使用 Flush flush缓存。 由于 Reset 只是简单的丢弃未被处理的数据，所以已经被写入的数据 cd 丢失了：
-```
+```golang
 func (b *Writer) Reset(w io.Writer) {
     b.err = nil
     b.n = 0
