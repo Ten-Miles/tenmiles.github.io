@@ -6,7 +6,7 @@ date:       2018-12-21 12:00:00
 author:     "zhihao"
 header-img: "img/about-bg-walle.jpg"
 tags:
-    - 写点什么
+    - 平凡的诗意
 ---
 
 不知道什么时候开始

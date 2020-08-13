@@ -6,7 +6,7 @@ date:       2017-08-05 12:00:00
 author:     "zhihao"
 header-img: "img/home-bg-alitrip.jpg"
 tags:
-    - 写点什么
+    - 平凡的诗意
 ---
 
 我喜欢那些具有旺盛生命力的人
