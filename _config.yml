@@ -3,8 +3,8 @@ title: 云深不知处
 SEOTitle: 云深不知处 
 header-img: img/home-bg.jpg
 email: wzh07@hotmail.com
-description: "关于程序与设计、黑客与画家 | oliver，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @oliveroliver 的个人博客，与你一起发现更大的世界。"
-keyword: "oliver, 鬼栈, @oliver, oliver的博客, oliver Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+description: "关于程序与设计、黑客与画家 | zhihao，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @zhihaozhihao 的个人博客，与你一起发现更大的世界。"
+keyword: "zhihao, 鬼栈, @zhihao, zhihao的博客, zhihao Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 # url: "https://huangxuan.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -17,7 +17,7 @@ weibo_username:
 zhihu_username:     
 github_username:    
 twitter_username:   
-#facebook_username:  oliver
+#facebook_username:  zhihao
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: oliver
+disqus_username: zhihao
 
 # Netease settings
 netease_comment: false
@@ -79,7 +79,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "In me the tiger sniff the rose<br>平凡的诗意"
-sidebar-avatar: /img/avatar-oliver-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-Hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
