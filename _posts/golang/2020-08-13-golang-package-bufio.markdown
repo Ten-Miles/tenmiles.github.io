@@ -4,10 +4,11 @@ title:      "Golang package 之 bufio"
 subtitle:   ""
 date:       2020-08-13 12:00:00
 author:     "zhihao"
-header-img: "img/home-bg-o.jpg"
+header-img: "img/home-bg-css.jpg"
 tags:
     - golang
 ---
+> 如果有工具能大幅度提高效率，那为什么不尝试一下呢。bufio包就是一个可以大幅度提高文件读写效率的包，一起来看看怎么用。
 
 ## bufio.Reader
 通过它，我们可以从底层的 `io.Reader` 中更大批量的读取数据。这会使读取操作变少。如果数据读取时的块数量是固定合适的，底层媒体设备将会有更好的表现，也因此会提高程序的性能：
