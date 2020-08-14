@@ -137,3 +137,86 @@ class Solution:
 
 ## 动态规划
 
+#### 最长公共子串
+
+```python
+
+def find_lcsubstr(s1, s2): 
+    m=[[0 for i in range(len(s2)+1)]  for j in range(len(s1)+1)]  #生成0矩阵，为方便后续计算，比字符串长度多了一列
+    mmax=0   #最长匹配的长度
+    p=0  #最长匹配对应在s1中的最后一位
+    for i in range(len(s1)):
+        for j in range(len(s2)):
+            if s1[i]==s2[j]:
+                m[i+1][j+1]=m[i][j]+1
+                if m[i+1][j+1]>mmax:
+                    mmax=m[i+1][j+1]
+                    p=i+1
+    return s1[p-mmax:p],mmax   #返回最长子串及其长度
+ 
+print find_lcsubstr('abcdfg','abdfg')
+```
+
+0-1背包
+
+```python
+capacity=10 #背包能容纳的weight
+n=5  #商品种类
+weights=[2,1,3,3,4]
+val=[4,2,6,7,6]
+def knapsack(capacity,n,weights,val):
+    dp=[0]*(capacity+1)
+    for i in range(1,n+1):
+        w,v=weights[i-1],val[i-1]
+        for j in range(capacity,0,-1):
+            if(j>=w):
+                dp[j]=max(dp[j],dp[j-w]+v)
+    return dp[capacity]
+
+print(knapsack(capacity,n,weights,val))
+```
+
+完全背包（物品数量为无限个）
+```python
+capacity=10 #背包能容纳的weight
+n=5  #商品种类
+weights=[2,1,3,3,4]
+val=[4,2,6,7,6]
+def knapsack(capacity,n,weights,val):
+    dp=[0]*(capacity+1)
+     for i in range(0,n):
+        w,v=weights[i],val[i]
+        for j in range(w,capacity+1):
+            dp[j]=max(dp[j],dp[j-w]+v)
+    return dp[capacity]
+
+print(knapsack(capacity,n,weights,val))
+```
+
+322.coins change
+```python
+def DP_Com(exlist,num):
+  an=[1]+[0]*num
+  for i in exlist :
+      for j in range(i,num+1):
+          an[j]+=an[j-i]
+  return an[num]
+print(DP_Com([1,2,5,10,20,50],100))
+```
+最少需要几张coin
+```python
+class Solution(object):
+    def coinChange(self, coins, amount):
+        """
+        :type coins: List[int]
+        :type amount: int
+        :rtype: int
+        """
+        # dp[i]表示amount=i需要的最少coin数
+        dp = [0]+[amount+1] * amount
+        for i in range(amount+1):
+            for c in coins:
+                    if c <= i:
+                        dp[i] = min(dp[i], dp[i-c]+1)
+        return dp[amount] if dp[amount] <= amount else -1
+```

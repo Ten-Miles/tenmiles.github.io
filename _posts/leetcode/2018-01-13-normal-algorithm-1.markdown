@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "leetcode刷题记录"
+title:      "leetcode刷题记录-1"
 subtitle:   ""
 date:       2018-01-13 12:00:00
 author:     "zhihao"
