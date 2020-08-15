@@ -12,7 +12,7 @@ tags:
 
 
 ##### 二分查找
- ```
+```python
 def  bin_search(data, val):
     l= 0
     h= len(list) - 1
@@ -27,7 +27,7 @@ def  bin_search(data, val):
     return -1
 ```
 ##### 快排
-```
+```python
 def quicksort(array):
     if len(array)<2:
         return array
@@ -41,7 +41,7 @@ print(quicksort([5,3,24,6,7,1,3,9,2]))
 
 ```
 ##### 二叉树的镜像
-```
+```python
 class Solution(object):
     def invertTree(self, root):
         """
@@ -56,7 +56,7 @@ class Solution(object):
         return root
 ```
 ##### 链表中环的入口结点 
-```
+```python
 class Solution(object):
     def detectCycle(self, head):
         """
@@ -76,7 +76,7 @@ class Solution(object):
         return None
 ```
 ##### 两个栈实现队列
-```
+```python
 class Solution:
     def __init__(self):
         self.stack1 = []
@@ -102,7 +102,7 @@ if __name__ == '__main__':
         print(s.pop())
 ```
 ##### 反转单链表
-```
+```python
 class Solution:
     """
     @param head: The first node of the linked list.
@@ -123,7 +123,7 @@ class Solution:
         return pre
 ```
 ##### 和为S的两个数字且乘积最小
-```
+```python
 class Solution:
     def FindNumbersWithSum(self, array, tsum):
         # write code here
@@ -140,7 +140,7 @@ class Solution:
         return ret
 ```
 ##### 顺时针打印矩阵
-```
+```python
 class Solution:
     def spiralOrder(self, matrix):
         """
@@ -172,7 +172,7 @@ if __name__ == '__main__':
     print(Solution().spiralOrder(arr))
 ```
 ##### 之字形打印二叉树（如果是顺序打印就删掉flag相关逻辑）
-```
+```python
 class Solution:
     def Print(self, pRoot):
         # write code here
@@ -198,7 +198,7 @@ class Solution:
         return result
 ```
 ##### 先序中序重建二叉树
-```
+```python
 class Solution(object):
     def buildTree(self, preorder, inorder):
         if len(inorder)>0:    
@@ -209,7 +209,7 @@ class Solution(object):
             return root
 ```
 ##### 中序后序重建二叉树
-```
+```python
 class Solution(object):
     def buildTree(self, inorder, postorder):
         """
@@ -226,7 +226,7 @@ class Solution(object):
 ```
 ##### 滑动窗口的最大值
 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2,5,1}， {2,3,4,[2,6,2],5,1}， {2,3,4,2,[6,2,5],1}， {2,3,4,2,6,[2,5,1]}。 
-```
+```python
 class Solution:
     def maxInWindows(self, num, size):
         # write code here
@@ -251,7 +251,7 @@ if __name__ == '__main__':
     print(Solution().maxInWindows(num, size))
 ```
 ##### 判断一个数是不是丑数
-```
+```python
 class Solution(object):
     def isUgly(self, num):
         """
@@ -271,9 +271,9 @@ class Solution(object):
 if __name__ == '__main__':
     print(Solution().isUgly(14))
 ```
-##### [两个链表的第一个公共结点](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&tqId=11189&tPage=2&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) 
+##### 两个链表的第一个公共结点
 思考：设链表pHead1的长度为a,到公共结点的长度为l1；链表pHead2的长度为b,到公共结点的长度为l2，有a+l2 = b+l1
-```
+```python
 class Solution:
     def FindFirstCommonNode(self, pHead1, pHead2):
         # write code here
@@ -286,9 +286,9 @@ class Solution:
             pb = pHead1 if pb is None else pb.next
         return pa
 ```
-##### [最小的K个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&tPage=2&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+##### 最小的K个数
 
-```
+```python
 import heapq
 class Solution:
     def GetLeastNumbers_Solution(self, tinput, k):
@@ -304,7 +304,7 @@ class Solution:
         return ret
 ```
 ##### 二维数组中的查找
-```
+```python
 # -*- coding:utf-8 -*-
 class Solution:
     # array 二维列表
@@ -324,7 +324,7 @@ class Solution:
         return False
 ```
 ##### 替换空格
-```
+```python
 import re
 class Solution:
     # s 源字符串
@@ -333,7 +333,7 @@ class Solution:
         return re.sub(" ","%20",s)
 ```
 ##### 是否为平衡二叉树
-```
+```python
 class Solution(object):
     def isBalanced(self, root):
         def height(node):
@@ -347,7 +347,7 @@ class Solution(object):
         return height(root) != -1
 ```
 ##### 字符串全排列
-```
+```python
 class Solution:
     def Permutation(self, ss):
         if not ss:
@@ -367,7 +367,7 @@ if __name__ == '__main__':
     print(Solution().Permutation("abcd"))
 ```
 ##### 合并两个排序的链表
-```
+```python
 class Solution:
     def mergeTwoLists(self, l1, l2):
         """
@@ -391,7 +391,7 @@ class Solution:
         return dummy.next
 ```
 ##### 二叉树中和为某一值的路径(dfs)
-```
+```python
 class Solution:
     def __init__(self):
         self.li = []
@@ -410,7 +410,7 @@ class Solution:
         return self.liall
 ```
 ##### 二进制中1的个数
-```
+```python
 class Solution:
     def numberof1(self,n):
         count=0
@@ -420,10 +420,10 @@ class Solution:
         return count
 
 ```
-##### [跳台阶](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) 
+##### 跳台阶
 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。 
 
-```
+```python
 class Solution:
     def jumpFloor(self, number):
         # write code here
@@ -439,9 +439,9 @@ class Solution:
             dp.append(dp[-1]+dp[-2])
         return dp[-1]
 ```
-##### [变态跳台阶](https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387?tpId=13&tqId=11162&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) 
+##### 变态跳台阶
 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法
-```
+```python
 class Solution:
     def jumpFloorII(self, number):
         # write code here
@@ -455,7 +455,7 @@ class Solution:
 ```
 
 ##### 连续子数组最大和
-```
+```python
 class Solution:
         def maxSubArra(self,nums):
             cursum=maxsum=nums[0]
