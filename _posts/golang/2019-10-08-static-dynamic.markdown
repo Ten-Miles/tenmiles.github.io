@@ -9,10 +9,9 @@ tags:
     - golang
 ---
 
-
-> 空接口是特殊形式的接口类型，普通的接口都有方法，而空接口没有定义任何方法口，也因此，我们可以说所有类型都至少实现了空接口。
 ## 静态类型
 >所谓的静态类型（即 static type），就是变量声明的时候的类型
+
 ```golang
 var age int   // int 是静态类型
 var name string  // string 也是静态类型
@@ -20,6 +19,7 @@ var name string  // string 也是静态类型
 
 ## 动态类型
 >所谓的 动态类型（即 concrete type，也叫具体类型）是 程序运行时系统才能看见的类型
+
 ```golang
 var i interface{}
 i = 99
