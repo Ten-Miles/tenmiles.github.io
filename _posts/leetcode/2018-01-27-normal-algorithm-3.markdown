@@ -93,6 +93,8 @@ public List<Integer> diffWaysToCompute(String input) {
 
 定义一个数组 dp 存储上楼梯的方法数（为了方便讨论，数组下标从 1 开始），dp[i] 表示走到第 i 个楼梯的方法数目。第 i 个楼梯可以从第 i-1 和 i-2 个楼梯再走一步到达，走到第 i 个楼梯的方法数为走到第 i-1 和第 i-2 个楼梯的方法数之和。
 
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-2]"/></div> <br>
+
 dp[N] 即为所求。
 
 考虑到 dp[i] 只与 dp[i - 1] 和 dp[i - 2] 有关，因此可以只用两个变量来存储 dp[i - 1] 和 dp[i - 2]，使得原来的 O(N) 空间复杂度优化为 O(1) 复杂度。
@@ -120,7 +122,7 @@ public int climbStairs(int n) {
 
 定义 dp 数组用来存储最大的抢劫量，其中 dp[i] 表示抢到第 i 个住户时的最大抢劫量。由于不能抢劫邻近住户，因此如果抢劫了第 i 个住户那么只能抢劫 i - 2 或者 i - 3 的住户，所以
 
-`dp[i]=max(dp[i-2],dp[i-3])+nums[i]`
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=max(dp[i-2],dp[i-3])+nums[i]"/></div> <br>
 
 ```java
 public int rob(int[] nums) {
@@ -178,7 +180,7 @@ private int rob(int[] nums, int first, int last) {
 
 第 i 年成熟的牛的数量为：
 
-`dp[i]=dp[i-1]+dp[i-3]`
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-3]"/></div> <br>
 
 **信件错排**
 
@@ -191,7 +193,7 @@ private int rob(int[] nums, int first, int last) {
 
 综上所述，错误装信数量方式数量为：
 
-`dp[i]=(i-1)*dp[i-2]+(i-1)*dp[i-1]`
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=(i-1)*dp[i-2]+(i-1)*dp[i-1]"/></div> <br>
 
 dp[N] 即为所求。
 
@@ -238,7 +240,6 @@ public int minPathSum(int[][] grid) {
 [62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/description/)
 
 题目描述：统计从矩阵左上角到右下角的路径总数，每次只能向右或者向下移动。
-
 
 ```java
 public int uniquePaths(int m, int n) {
@@ -456,7 +457,7 @@ public int numDecodings(String s) {
 
 因为在求 dp[n] 时可能无法找到一个满足条件的递增子序列，此时 {S<sub>n</sub>} 就构成了递增子序列，需要对前面的求解方程做修改，令 dp[n] 最小为 1，即：
 
-dp[n]=max{1,dp[i]+1|S<sub>i</sub> < S<sub>n</sub>&&i<n}
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[n]=max\{1,dp[i]+1\|S_i<S_n\&\&i<n\}"/></div> <br>
 
 对于一个长度为 N 的序列，最长递增子序列并不一定会以 S<sub>N</sub> 为结尾，因此 dp[N] 不是序列的最长递增子序列的长度，需要遍历 dp 数组找出最大值才是所要的结果，即 max{ dp[i] | 1 <= i <= N} 即为所求。
 
@@ -1071,7 +1072,6 @@ public int maxProfit(int[] prices) {
 
 题目描述：交易之后需要有一天的冷却时间。
 
-<div align="center"> <img src="../pics//a3da4342-078b-43e2-b748-7e71bec50dc4.png"/> </div><br>
 
 ```java
 public int maxProfit(int[] prices) {
@@ -1112,7 +1112,6 @@ The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
 
 题目描述：每交易一次，都要支付一定的费用。
 
-<div align="center"> <img src="../pics//61942711-45a0-4e11-bbc9-434e31436f33.png"/> </div><br>
 
 ```java
 public int maxProfit(int[] prices, int fee) {
